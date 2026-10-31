@@ -1,3 +1,4 @@
+// 1. Cambiá la importación de react-router-dom:
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { BarraNavegacion } from './components/BarraNavegacion';
 import { Inicio } from './pages/Inicio';
@@ -9,7 +10,8 @@ export function App() {
   const { tema } = useCarrito();
 
   return (
-    <BrowserRouter>
+    // 2. Reemplazá BrowserRouter por Router
+    <Router>
       <div 
         style={{ 
           minHeight: '100vh', 
@@ -27,7 +29,7 @@ export function App() {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
